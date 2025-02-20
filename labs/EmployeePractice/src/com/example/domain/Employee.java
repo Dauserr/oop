@@ -1,44 +1,36 @@
 package com.example.domain;
 
 public class Employee {
+    private int empId;
+    private String name;
+    private String ssn;
+    private double salary;
 
-    public int employeeId;
-    public String employeeName;
-    public String employeeSSN;
-    public double employeeSalary;
-
-    public Employee() {
+    public Employee(int empId, String name, String ssn, double salary) {
+        this.empId = empId;
+        this.name = name;
+        this.ssn = ssn;
+        this.salary = salary;
+    }
+    public int getEmpId() {
+        return empId;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getName() {
+        return name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public String getSsn() {
+        return ssn;
     }
 
-    public int getEmployeeId() {
-        return employeeId;
+    public double getSalary() {
+        return salary;
     }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public String getEmployeeSSN() {
-        return employeeSSN;
-    }
-
-    public void setEmployeeSSN(String employeeSSN) {
-        this.employeeSSN = employeeSSN;
-    }
-
-    public double getEmployeeSalary() {
-        return employeeSalary;
-    }
-
-    public void setEmployeeSalary(double employeeSalary) {
-        this.employeeSalary = employeeSalary;
+    public void raiseSalary(double increase) {
+        salary += increase;
     }
 }

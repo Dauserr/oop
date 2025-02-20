@@ -33,10 +33,10 @@ public class SearchReplace {
                 Matcher m = pattern1.matcher(line);
 
                 if (m.find()) {
-                    String newStart = replaceTag(m.group(1), targetTag, replaceTag);
-                    newStart = replaceAttribute(newStart, attribute, value);
-                    String newEnd = replaceTag(m.group(3), targetTag, replaceTag);
-                    String newLine = newStart + m.group(2) + newEnd;
+                    String newStart = replaceTag(m.group(1), targetTag, replaceTag);// <p> на <span>
+                    newStart = replaceAttribute(newStart, attribute, value);//class="line" на class="sentence"
+                    String newEnd = replaceTag(m.group(3), targetTag, replaceTag);// </p> на </span>
+                    String newLine = newStart + m.group(2) + newEnd;// внутри не трогаем
 
                     System.out.printf("%3d %s\n", lineNumber, newLine);
                 }

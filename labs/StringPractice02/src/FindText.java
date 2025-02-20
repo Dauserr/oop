@@ -15,7 +15,7 @@ public class FindText {
             String line;
             int lineNumber = 0;
 
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) {// line присвается текущая строка
                 lineNumber++;
                 m = pattern.matcher(line);
                 if (m.find()) {

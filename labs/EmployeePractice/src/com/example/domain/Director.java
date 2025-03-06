@@ -1,4 +1,5 @@
 package com.example.domain;
+import java.text.NumberFormat;
 
 public class Director extends Manager {
     private double budget;
@@ -10,5 +11,9 @@ public class Director extends Manager {
 
     public double getBudget() {
         return budget;
+    }
+    @Override
+    public String toString() {
+        return super.toString() + "\nBudget: " + NumberFormat.getCurrencyInstance().format(budget);
     }
 }

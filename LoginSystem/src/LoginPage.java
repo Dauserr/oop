@@ -35,6 +35,7 @@ public class LoginPage implements ActionListener {
 
         resetButton.setBounds(225,200,100,25);
         resetButton.setFocusable(false);
+        resetButton.addActionListener(this);
 
         frame.add(userIDLabel);
         frame.add(userPasswordLabel);

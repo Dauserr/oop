@@ -45,7 +45,7 @@ public class OuterClass { // top level class
         }
     };// anonymous class - без имени
 
-    public class InnerClass {//nested class - внутренний нестатический
+    public class InnerClass {//member class - внутренний нестатический
 
         // hides OuterClass x
         public int x = 43;

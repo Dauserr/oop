@@ -2,11 +2,7 @@ package com.example.dao;
 
 public class EmployeeDAOFactory {
 
-    public EmployeeDAO createEmployeeDAO() {
-        return new EmployeeDAOMemoryImpl();
-    }
-
-    public static EmployeeDAO getFactory() {
+    public static EmployeeDAO createEmployeeDAO() {
         return new EmployeeDAOJDBCImpl();
     }
 

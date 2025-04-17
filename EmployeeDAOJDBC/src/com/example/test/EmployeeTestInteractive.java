@@ -12,6 +12,8 @@ import java.util.Date;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
+
 
 public class EmployeeTestInteractive {
 
@@ -123,7 +125,7 @@ public class EmployeeTestInteractive {
     }
 
     public static Employee inputEmployee(BufferedReader in, Employee empDefaults, boolean newEmployee) throws IOException {
-        SimpleDateFormat df = new SimpleDateFormat("MMM d, yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("MMM d, yyyy", Locale.ENGLISH);
         NumberFormat nf = NumberFormat.getCurrencyInstance();
         int id = -1;
         String firstName;

@@ -16,15 +16,22 @@ public class SimpleJDBCExample {
         String username = "public";
         String password = "tiger";
 
-        // Create a simple query
-        String query = "select * from EMPLOYEE";
 
         // A try-with-resources example
         // Connection and Statement implement java.lan.AutoCloseable
         try (Connection con = DriverManager.getConnection(url, username, password)) {
             Statement stmt = con.createStatement();
 
-            ResultSet rs = stmt.executeQuery(query);
+            /*insertQuery = "INSERT INTO Employee VALUES (234, 'Dowl', 'Asderay', '1954-09-21', 150400)";
+            int rowsAffected = stmt.executeUpdate(insertQuery); // выполняет INSERT
+            if (rowsAffected != 1) {
+                System.out.println("Failed to add a new employee record");
+            } else {
+                System.out.println("Successfully inserted 1 row.");
+            }*/
+
+            String selectQuery = "SELECT * FROM EMPLOYEE";
+            ResultSet rs = stmt.executeQuery(selectQuery);
 
             while (rs.next()) {
                 int empID = rs.getInt("ID");
